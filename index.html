@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adachi</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./img/truedachi.ico">
+</head>
+<body>
+    <h1>adachi</h1>
+    <h2>adachi.</h2>
+    <h2 id="hint1">click anywhere for a surprise :)</h2>
+    <image src="./img/truedachi.png" class="adachi2" id="true"></image>
+    <script>
+        function createJunesTheme() {
+            if (document.getElementById("JunesTheme")) return;
+            document.getElementById("hint1").remove()
+            
+            // create audio :)
+            var audio = document.createElement("audio")
+            // audio in document :)
+            document.body.appendChild(audio)
+            // fun stuff :)
+            audio.id = "JunesTheme"
+            audio.src = "./sfx/JunesTheme.mp3"
+            audio.volume = 0.2
+            audio.play()
+            setTimeout(() => {
+                document.getElementById("true").className = "adachi"
+            }, 450)
+        }
+        document.addEventListener("mouseup", createJunesTheme, false)
+    </script>
+</body>
+</html>
