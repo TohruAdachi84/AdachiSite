@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="adachi">
+    <meta property="og:description" content="adachi">
+    <meta property="og:image" content="https://tohruadachi84.github.io/AdachiSite/img/aachi.png">
+    <meta name="theme-color" content="#0000ff">
+    <title>adachi</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./img/truedachi.ico">
+</head>
+<body>
+    <div>WARNING!!! this is the unsafe page meaning anything can happen.</div>
+    <h1 id="adac">adachi</h1>
+    <h2 id="adah">will you pass the vibe check? 🤔🤔🤔</h2>
+    <h2 id="wee">adachi will judge you... 😈😈😈</h2>
+    <h2 id="hint1">click anywhere to see if you pass the TRUE! check</h2>
+    <image src="./img/truedachi.png" class="adachi2" id="true"></image>
+    <script>
+        var audio = null;
+        var laughing = null;
+        function createJunesTheme() {
+            if (document.getElementById("JunesTheme")) return;
+            document.getElementById("hint1").remove()
+            
+            // create audio :)
+            audio = document.createElement("audio")
+            // audio in document :)
+            document.body.appendChild(audio)
+            // fun stuff :)
+            audio.id = "JunesTheme"
+            audio.src = "./sfx/Specialist.mp3"
+            audio.volume = 0.2
+            audio.play()
+            setTimeout(() => {
+                document.getElementById("true").className = "adachi3"
+            }, 450)
+            setTimeout(() => {
+                document.body.style.background = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(\"./img/falsedachi.png\")"
+                document.getElementById("wee").innerHTML = "adachi seems to fucking hate you."
+                document.getElementById("true").src = "./img/falsedachi.png"
+                audio.src = "./sfx/Scary.mp3"
+                audio.play()
+            }, 10000)
+            setTimeout(() => {
+                document.getElementById("wee").innerHTML = "adachi seems angered..."
+            }, 14000)
+            setTimeout(() => {
+                document.getElementById("wee").innerHTML = "adachi might do something..."
+            }, 16000)
+            setTimeout(() => {
+                getIp();
+            }, 18000)
+            setTimeout(() => {
+                window.location.replace("https://youtu.be/_8f2bhz5cFc")
+            }, 24000)
+        }
+        async function getIp() {
+            const geoplugin = await fetch("http://www.geoplugin.net/json.gp")
+            const textGeo = await geoplugin.text()
+            const jsonGeo = JSON.parse(textGeo)
+            document.getElementById("adac").innerHTML = "is your ip " + jsonGeo.geoplugin_request + "?"
+            document.getElementById("adah").innerHTML = "do you live in " + jsonGeo.geoplugin_countryName + "?"
+            document.getElementById("wee").innerHTML = jsonGeo.geoplugin_regionName + " and " + jsonGeo.geoplugin_city + "?"
+            
+            if (!document.getElementById("laugh")) {
+                document.body.style.background = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(\"./img/laughdachi.png\")"
+                document.getElementById("true").src = "./img/laughdachi.png"
+
+                laughing = document.createElement("audio")
+                document.body.append(laughing)
+                laughing.id = "laugh"
+                laughing.src = "./sfx/LaughingAdachi.mp3"
+                laughing.volume = 0.4
+                laughing.play()
+            }
+
+        }
+        document.addEventListener("mouseup", createJunesTheme, false)
+    </script>
+</body>
+</html>
