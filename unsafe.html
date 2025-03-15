@@ -52,18 +52,18 @@
             }, 16000)
             setTimeout(() => {
                 getIp();
-            }, 18000)
+            }, 18000)   
             setTimeout(() => {
                 window.location.replace("https://youtu.be/_8f2bhz5cFc")
             }, 24000)
         }
         async function getIp() {
-            const geoplugin = await fetch("http://www.geoplugin.net/json.gp")
+            const geoplugin = await fetch("https://api.db-ip.com/v2/free/self")
             const textGeo = await geoplugin.text()
             const jsonGeo = JSON.parse(textGeo)
-            document.getElementById("adac").innerHTML = "is your ip " + jsonGeo.geoplugin_request + "?"
-            document.getElementById("adah").innerHTML = "do you live in " + jsonGeo.geoplugin_countryName + "?"
-            document.getElementById("wee").innerHTML = jsonGeo.geoplugin_regionName + " and " + jsonGeo.geoplugin_city + "?"
+            document.getElementById("adac").innerHTML = "is your ip " + jsonGeo.ipAddress + "?"
+            document.getElementById("adah").innerHTML = "do you live in " + jsonGeo.countryName + "?"
+            document.getElementById("wee").innerHTML = jsonGeo.stateProv + " and " + jsonGeo.city + "?"
             
             if (!document.getElementById("laugh")) {
                 document.body.style.background = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(\"./img/laughdachi.png\")"
