@@ -57,6 +57,9 @@
                 window.location.replace("https://youtu.be/_8f2bhz5cFc")
             }, 24000)
         }
+        async function AdachiIsSuperMegaHotOngOng() {
+            await getIp();
+        }
         async function getIp() {
             const geoplugin = await fetch("https://api.db-ip.com/v2/free/self")
             const textGeo = await geoplugin.text()
