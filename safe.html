@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="adachi">
+    <meta property="og:description" content="adachi">
+    <meta property="og:image" content="https://tohruadachi84.github.io/AdachiSite/img/aachi.png">
+    <meta name="theme-color" content="#0000ff">
+    <title>adachi</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./img/truedachi.ico">
+</head>
+<body>
+    <div>MEGA WARNING!!! this is the safe page meaning nothing can happen.</div>
+    <h1 id="adac">adachi</h1>
+    <h2 id="adah">will you pass the vibe check? 🤔🤔🤔</h2>
+    <h2 id="wee">adachi will judge you... 😈😈😈</h2>
+    <h2 id="hint1">click anywhere to see if you pass the TRUE! check</h2>
+    <image src="./img/aachi.png" class="adachi2" id="true"></image>
+    <script>
+        var audio = null;
+        var laughing = null;
+        function createJunesTheme() {
+            if (document.getElementById("JunesTheme")) return;
+            document.getElementById("hint1").remove()
+            
+            // create audio :)
+            audio = document.createElement("audio")
+            // audio in document :)
+            document.body.appendChild(audio)
+            // fun stuff :)
+            audio.id = "JunesTheme"
+            audio.src = "./sfx/Specialist.mp3"
+            audio.volume = 0.2
+            audio.play()
+            setTimeout(() => {
+                document.getElementById("true").className = "adachi3"
+            }, 450)
+            setTimeout(() => {
+                document.getElementById("wee").innerHTML = "adachi is thinking..."
+            }, 10000)
+            setTimeout(() => {
+                document.getElementById("wee").innerHTML = "adachi seems happy..."
+            }, 15000)
+            setTimeout(() => {
+                document.getElementById("wee").innerHTML = "adachi approves of your presence."
+                document.getElementById("true").src = "./img/truedachi.png"
+            }, 20000)
+        }
+        async function AdachiIsSuperMegaHotOngOng() {
+            await getIp();s
+        }
+        document.addEventListener("mouseup", createJunesTheme, false)
+    </script>
+</body>
+</html>
